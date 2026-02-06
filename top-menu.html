@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Menu Layout - Axis Twelve Admin Panel</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Axis Twelve CSS Framework (Modular) -->
+    <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-layout.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-buttons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-cards.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-tables.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/themes.css">
+
+    <style>
+        /* Top Menu Layout Specific Styles */
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-menu-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-navbar {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-navbar__container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+
+        .top-navbar__brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--color-white);
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .top-navbar__logo {
+            width: 32px;
+            height: 32px;
+        }
+
+        .top-navbar__menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 0.5rem;
+        }
+
+        .top-navbar__link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            border-radius: var(--radius);
+            transition: var(--transition-fast);
+            font-size: 0.95rem;
+        }
+
+        .top-navbar__link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-white);
+        }
+
+        .top-navbar__link--active {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        .top-navbar__right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .top-navbar__icon-btn {
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--radius);
+            transition: var(--transition-fast);
+            position: relative;
+        }
+
+        .top-navbar__icon-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .top-navbar__badge {
+            position: absolute;
+            top: 0.25rem;
+            right: 0.25rem;
+            background-color: var(--color-danger);
+            color: var(--color-white);
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 0.15rem 0.4rem;
+            border-radius: 10px;
+            min-width: 18px;
+            text-align: center;
+        }
+
+        .top-content {
+            flex: 1;
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .top-footer {
+            background-color: var(--bg-footer);
+            border-top: 1px solid var(--border-color);
+            padding: 1rem 1.5rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .top-navbar__menu {
+                display: none;
+            }
+
+            .top-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-menu-wrapper">
+
+        <!-- Top Navigation Bar -->
+        <nav class="top-navbar">
+            <div class="top-navbar__container">
+                <a href="top-menu.html" class="top-navbar__brand">
+                    <img src="assets/images/logo.png" alt="Logo" class="top-navbar__logo">
+                    <span>Axis Twelve</span>
+                </a>
+
+                <ul class="top-navbar__menu">
+                    <li>
+                        <a href="index.html" class="top-navbar__link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="forms.html" class="top-navbar__link">
+                            <i class="fas fa-edit"></i>
+                            <span>Forms</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="typography.html" class="top-navbar__link">
+                            <i class="fas fa-font"></i>
+                            <span>Typography</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tables.html" class="top-navbar__link">
+                            <i class="fas fa-table"></i>
+                            <span>Tables</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blank.html" class="top-navbar__link">
+                            <i class="fas fa-file"></i>
+                            <span>Blank</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="top-menu.html" class="top-navbar__link top-navbar__link--active">
+                            <i class="fas fa-bars"></i>
+                            <span>Top Menu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="attribution.html" class="top-navbar__link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Attribution</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="top-navbar__right">
+                    <button class="top-navbar__icon-btn" aria-label="Notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="top-navbar__badge">5</span>
+                    </button>
+
+                    <button class="top-navbar__icon-btn" aria-label="User menu">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="top-content">
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Top Menu Dashboard</h1>
+                <div class="page-breadcrumb">
+                    <span class="breadcrumb-item">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </span>
+                    <span>/</span>
+                    <span>Top Menu Layout</span>
+                </div>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="ax-grid ax-gap-lg" class="page-header">
+                <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
+                    <div class="stat-card">
+                        <i class="fas fa-users stat-card__icon"></i>
+                        <div class="stat-card__label">Total Users</div>
+                        <div class="stat-card__value">2,543</div>
+                        <div class="stat-card__change">
+                            <i class="fas fa-arrow-up"></i>
+                            12.5% from last month
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
+                    <div class="stat-card stat-card--secondary">
+                        <i class="fas fa-shopping-cart stat-card__icon"></i>
+                        <div class="stat-card__label">Total Orders</div>
+                        <div class="stat-card__value">1,829</div>
+                        <div class="stat-card__change">
+                            <i class="fas fa-arrow-up"></i>
+                            8.3% from last month
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
+                    <div class="stat-card stat-card--success">
+                        <i class="fas fa-dollar-sign stat-card__icon"></i>
+                        <div class="stat-card__label">Revenue</div>
+                        <div class="stat-card__value">$48,392</div>
+                        <div class="stat-card__change">
+                            <i class="fas fa-arrow-up"></i>
+                            15.2% from last month
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
+                    <div class="stat-card stat-card--warning">
+                        <i class="fas fa-chart-line stat-card__icon"></i>
+                        <div class="stat-card__label">Growth Rate</div>
+                        <div class="stat-card__value">23.4%</div>
+                        <div class="stat-card__change">
+                            <i class="fas fa-arrow-up"></i>
+                            3.1% from last month
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Card -->
+            <div class="ax-grid ax-gap-lg">
+                <div class="ax-col-12">
+                    <div class="ax-card">
+                        <div class="ax-card__header">
+                            <h2 class="ax-card__title">Top Menu Layout</h2>
+                        </div>
+                        <div class="ax-card__body">
+                            <p class="mb-1-lh-16">
+                                This is an alternative layout with horizontal navigation instead of the sidebar. The top
+                                menu provides
+                                easy access to all pages while maximizing the content area width.
+                            </p>
+                            <p class="mb-1-lh-16">
+                                <strong>Key features of this layout:</strong>
+                            </p>
+                            <ul class="ml-15-lh-18">
+                                <li>Full-width content area for better use of screen space</li>
+                                <li>Sticky navigation bar that stays visible while scrolling</li>
+                                <li>Horizontal menu items for quick navigation</li>
+                                <li>Same dashboard widgets and functionality as the sidebar layout</li>
+                                <li>Responsive design that adapts to different screen sizes</li>
+                            </ul>
+                            <p class="mb-0 line-height-16">
+                                You can switch between this layout and the <a href="index.html">sidebar layout</a> based
+                                on your preference.
+                            </p>
+                        </div>
+                        <div class="ax-card__footer">
+                            <a href="index.html" class="ax-btn ax-btn--primary">
+                                <i class="fas fa-arrow-left"></i>
+                                Back to Sidebar Layout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="top-footer">
+            &copy; 2024 Axis Twelve Admin Panel. All rights reserved.
+        </footer>
+
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="assets/js/dashboard.js"></script>
+
+    <style>
+        /* Include stat-card styles from admin-panel.css */
+        .stat-card {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            color: var(--color-white);
+            box-shadow: var(--shadow);
+            transition: var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-card--secondary {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+            color: var(--color-primary);
+        }
+
+        .stat-card--success {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        }
+
+        .stat-card--warning {
+            background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+        }
+
+        .stat-card__icon {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+
+        .stat-card__label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .stat-card__value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card__change {
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            opacity: 0.9;
+        }
+    </style>
+
+</body>
+
+</html>

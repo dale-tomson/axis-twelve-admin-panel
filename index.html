@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Axis Twelve Admin Panel - Modern dashboard for managing your application">
+  <title>Dashboard - Axis Twelve Admin Panel</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Axis Twelve CSS Framework (Modular) -->
+  <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-layout.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-buttons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-forms.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-cards.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-tables.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/themes.css">
+  <link rel="stylesheet" href="assets/css/admin-panel.css">
+</head>
+<body>
+  
+  <div class="admin-wrapper">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="admin-sidebar">
+      <a href="index.html" class="admin-sidebar__brand">
+        <img src="assets/images/logo.png" alt="Logo" class="admin-sidebar__logo">
+        <span class="admin-sidebar__brand-text">Axis Twelve</span>
+      </a>
+      
+      <nav>
+        <ul class="admin-sidebar__menu">
+          <li class="admin-sidebar__item">
+            <a href="index.html" class="admin-sidebar__link admin-sidebar__link--active">
+              <i class="fas fa-tachometer-alt admin-sidebar__icon"></i>
+              <span class="admin-sidebar__text">Dashboard</span>
+            </a>
+          </li>
+          <li class="admin-sidebar__item">
+            <a href="forms.html" class="admin-sidebar__link">
+              <i class="fas fa-edit admin-sidebar__icon"></i>
+              <span class="admin-sidebar__text">Forms</span>
+            </a>
+          </li>
+          <li class="admin-sidebar__item">
+            <a href="typography.html" class="admin-sidebar__link">
+              <i class="fas fa-font admin-sidebar__icon"></i>
+              <span class="admin-sidebar__text">Typography</span>
+            </a>
+          </li>
+          <li class="admin-sidebar__item">
+            <a href="tables.html" class="admin-sidebar__link">
+              <i class="fas fa-table admin-sidebar__icon"></i>
+              <span class="admin-sidebar__text">Tables</span>
+            </a>
+          </li>
+          <li class="admin-sidebar__item">
+            <a href="blank.html" class="admin-sidebar__link">
+              <i class="fas fa-file admin-sidebar__icon"></i>
+              <span class="admin-sidebar__text">Blank Page</span>
+            </a>
+          </li>
+          <li class="admin-sidebar__item">
+            <a href="top-menu.html" class="admin-sidebar__link">
+              <i class="fas fa-bars admin-sidebar__icon"></i>
+              <span class="admin-sidebar__text">Top Menu Layout</span>
+            </a>
+          </li>
+          <li class="admin-sidebar__item">
+            <a href="attribution.html" class="admin-sidebar__link">
+              <i class="fas fa-info-circle admin-sidebar__icon"></i>
+              <span class="admin-sidebar__text">Attribution</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <!-- Main Content Area -->
+    <div class="admin-main">
+      
+      <!-- Header -->
+      <header class="admin-header">
+        <div class="admin-header__left">
+          <button class="admin-header__toggle" aria-label="Toggle sidebar">
+            <i class="fas fa-bars"></i>
+          </button>
+          
+          <div class="admin-header__search">
+            <i class="fas fa-search admin-header__search-icon"></i>
+            <input type="search" class="admin-header__search-input" placeholder="Search...">
+          </div>
+        </div>
+        
+        <div class="admin-header__right">
+          <button class="admin-header__notification" aria-label="Notifications">
+            <i class="fas fa-bell"></i>
+            <span class="admin-header__badge">5</span>
+          </button>
+          
+          <button class="admin-header__user" aria-label="User menu">
+            <i class="fas fa-user-circle"></i>
+          </button>
+        </div>
+      </header>
+      
+      <!-- Content -->
+      <main class="admin-content">
+        
+        <!-- Page Header -->
+        <div class="admin-content__header">
+          <h1 class="admin-content__title">Dashboard</h1>
+          <div class="admin-content__breadcrumb">
+            <span class="admin-content__breadcrumb-item">
+              <i class="fas fa-home"></i>
+              Home
+            </span>
+            <span class="admin-content__breadcrumb-separator">/</span>
+            <span class="admin-content__breadcrumb-item">Dashboard</span>
+          </div>
+        </div>
+        
+        <!-- Statistics Cards -->
+        <div class="ax-grid ax-gap-lg" class="page-header">
+          <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
+            <div class="stat-card">
+              <i class="fas fa-users stat-card__icon"></i>
+              <div class="stat-card__label">Total Users</div>
+              <div class="stat-card__value">2,543</div>
+              <div class="stat-card__change">
+                <i class="fas fa-arrow-up"></i>
+                12.5% from last month
+              </div>
+            </div>
+          </div>
+          
+          <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
+            <div class="stat-card stat-card--secondary">
+              <i class="fas fa-shopping-cart stat-card__icon"></i>
+              <div class="stat-card__label">Total Orders</div>
+              <div class="stat-card__value">1,829</div>
+              <div class="stat-card__change">
+                <i class="fas fa-arrow-up"></i>
+                8.3% from last month
+              </div>
+            </div>
+          </div>
+          
+          <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
+            <div class="stat-card stat-card--success">
+              <i class="fas fa-dollar-sign stat-card__icon"></i>
+              <div class="stat-card__label">Revenue</div>
+              <div class="stat-card__value">$48,392</div>
+              <div class="stat-card__change">
+                <i class="fas fa-arrow-up"></i>
+                15.2% from last month
+              </div>
+            </div>
+          </div>
+          
+          <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
+            <div class="stat-card stat-card--warning">
+              <i class="fas fa-chart-line stat-card__icon"></i>
+              <div class="stat-card__label">Growth Rate</div>
+              <div class="stat-card__value">23.4%</div>
+              <div class="stat-card__change">
+                <i class="fas fa-arrow-up"></i>
+                3.1% from last month
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Charts Section -->
+        <div class="ax-grid ax-gap-lg" class="page-header">
+          <div class="ax-col-12 ax-col-lg-8">
+            <div class="chart-container">
+              <div class="chart-container__header">
+                <h2 class="chart-container__title">Revenue Overview</h2>
+                <div class="chart-container__actions">
+                  <button class="ax-btn ax-btn--sm ax-btn--outline-primary">Export</button>
+                </div>
+              </div>
+              <div class="chart-wrapper">
+                <canvas id="revenueChart"></canvas>
+              </div>
+            </div>
+          </div>
+          
+          <div class="ax-col-12 ax-col-lg-4">
+            <div class="chart-container">
+              <div class="chart-container__header">
+                <h2 class="chart-container__title">Traffic Sources</h2>
+              </div>
+              <div class="chart-wrapper">
+                <canvas id="trafficChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Recent Activity Table -->
+        <div class="ax-grid ax-gap-lg">
+          <div class="ax-col-12">
+            <div class="ax-card">
+              <div class="ax-card__header">
+                <h2 class="ax-card__title">Recent Orders</h2>
+              </div>
+              <div class="ax-card__body">
+                <div class="overflow-auto">
+                  <table class="ax-table ax-table--striped">
+                    <thead>
+                      <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#ORD-2024-001</td>
+                        <td>John Smith</td>
+                        <td>Premium Package</td>
+                        <td>$299.00</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                        <td>2024-02-06</td>
+                      </tr>
+                      <tr>
+                        <td>#ORD-2024-002</td>
+                        <td>Sarah Johnson</td>
+                        <td>Standard Plan</td>
+                        <td>$149.00</td>
+                        <td><span class="badge badge-warning">Pending</span></td>
+                        <td>2024-02-06</td>
+                      </tr>
+                      <tr>
+                        <td>#ORD-2024-003</td>
+                        <td>Michael Brown</td>
+                        <td>Enterprise Suite</td>
+                        <td>$599.00</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                        <td>2024-02-05</td>
+                      </tr>
+                      <tr>
+                        <td>#ORD-2024-004</td>
+                        <td>Emily Davis</td>
+                        <td>Basic Package</td>
+                        <td>$99.00</td>
+                        <td><span class="badge badge-processing">Processing</span></td>
+                        <td>2024-02-05</td>
+                      </tr>
+                      <tr>
+                        <td>#ORD-2024-005</td>
+                        <td>David Wilson</td>
+                        <td>Premium Package</td>
+                        <td>$299.00</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                        <td>2024-02-04</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="ax-card__footer">
+                <button class="ax-btn ax-btn--primary">View All Orders</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </main>
+      
+      <!-- Footer -->
+      <footer class="admin-footer">
+        <div>
+          &copy; 2024 Axis Twelve Admin Panel. All rights reserved.
+        </div>
+        <div class="admin-footer__links">
+          <a href="attribution.html">Attribution</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </footer>
+      
+    </div>
+  </div>
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  
+  <!-- Custom Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribution - Axis Twelve Admin Panel</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Axis Twelve CSS Framework (Modular) -->
+    <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-layout.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-buttons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-cards.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/admin-panel.css">
+</head>
+
+<body>
+
+    <div class="admin-wrapper">
+
+        <!-- Sidebar Navigation -->
+        <aside class="admin-sidebar">
+            <a href="index.html" class="admin-sidebar__brand">
+                <img src="assets/images/logo.png" alt="Logo" class="admin-sidebar__logo">
+                <span class="admin-sidebar__brand-text">Axis Twelve</span>
+            </a>
+
+            <nav>
+                <ul class="admin-sidebar__menu">
+                    <li class="admin-sidebar__item">
+                        <a href="index.html" class="admin-sidebar__link">
+                            <i class="fas fa-tachometer-alt admin-sidebar__icon"></i>
+                            <span class="admin-sidebar__text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="admin-sidebar__item">
+                        <a href="forms.html" class="admin-sidebar__link">
+                            <i class="fas fa-edit admin-sidebar__icon"></i>
+                            <span class="admin-sidebar__text">Forms</span>
+                        </a>
+                    </li>
+                    <li class="admin-sidebar__item">
+                        <a href="typography.html" class="admin-sidebar__link">
+                            <i class="fas fa-font admin-sidebar__icon"></i>
+                            <span class="admin-sidebar__text">Typography</span>
+                        </a>
+                    </li>
+                    <li class="admin-sidebar__item">
+                        <a href="tables.html" class="admin-sidebar__link">
+                            <i class="fas fa-table admin-sidebar__icon"></i>
+                            <span class="admin-sidebar__text">Tables</span>
+                        </a>
+                    </li>
+                    <li class="admin-sidebar__item">
+                        <a href="blank.html" class="admin-sidebar__link">
+                            <i class="fas fa-file admin-sidebar__icon"></i>
+                            <span class="admin-sidebar__text">Blank Page</span>
+                        </a>
+                    </li>
+                    <li class="admin-sidebar__item">
+                        <a href="top-menu.html" class="admin-sidebar__link">
+                            <i class="fas fa-bars admin-sidebar__icon"></i>
+                            <span class="admin-sidebar__text">Top Menu Layout</span>
+                        </a>
+                    </li>
+                    <li class="admin-sidebar__item">
+                        <a href="attribution.html" class="admin-sidebar__link admin-sidebar__link--active">
+                            <i class="fas fa-info-circle admin-sidebar__icon"></i>
+                            <span class="admin-sidebar__text">Attribution</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="admin-main">
+
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="admin-header__left">
+                    <button class="admin-header__toggle" aria-label="Toggle sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <div class="admin-header__search">
+                        <i class="fas fa-search admin-header__search-icon"></i>
+                        <input type="search" class="admin-header__search-input" placeholder="Search...">
+                    </div>
+                </div>
+
+                <div class="admin-header__right">
+                    <button class="admin-header__notification" aria-label="Notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="admin-header__badge">5</span>
+                    </button>
+
+                    <button class="admin-header__user" aria-label="User menu">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <main class="admin-content">
+
+                <!-- Page Header -->
+                <div class="admin-content__header">
+                    <h1 class="admin-content__title">Attribution & Credits</h1>
+                    <div class="admin-content__breadcrumb">
+                        <span class="admin-content__breadcrumb-item">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </span>
+                        <span class="admin-content__breadcrumb-separator">/</span>
+                        <span class="admin-content__breadcrumb-item">Attribution</span>
+                    </div>
+                </div>
+
+                <!-- Project Information -->
+                <div class="ax-grid ax-gap-lg" class="page-header">
+                    <div class="ax-col-12">
+                        <div class="ax-card">
+                            <div class="ax-card__header">
+                                <h2 class="ax-card__title">About This Project</h2>
+                            </div>
+                            <div class="ax-card__body">
+                                <h3 class="mb-1">Axis Twelve Admin Panel</h3>
+                                <p class="mb-1-lh-16">
+                                    This admin panel is built using the <strong>Axis Twelve CSS Framework</strong> and
+                                    various open-source libraries.
+                                    It serves as a modern, responsive dashboard template for web applications.
+                                </p>
+                                <p class="mb-0 line-height-16">
+                                    The project is designed to be copyright-free and can be used as a starting point for
+                                    your own admin panel projects.
+                                    All third-party resources used in this project are properly attributed below.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Open Source Frameworks & Libraries -->
+                <div class="ax-grid ax-gap-lg" class="page-header">
+                    <div class="ax-col-12">
+                        <div class="ax-card">
+                            <div class="ax-card__header">
+                                <h2 class="ax-card__title">Frameworks & Libraries</h2>
+                            </div>
+                            <div class="ax-card__body">
+
+                                <!-- Axis Twelve -->
+                                <div class="mb-2-pb-2-border-bottom">
+                                    <h3 class="mb-05">
+                                        <i class="fas fa-th"
+                                            style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+                                        Axis Twelve CSS Framework
+                                    </h3>
+                                    <p class="mb-075-text-secondary">
+                                        A lightweight, modular CSS framework with 12-column grid system, flexbox
+                                        utilities, and complete UI components.
+                                    </p>
+                                    <div class="ax-flex ax-gap-md ax-flex-wrap">
+                                        <a href="https://github.com/dale-tomson/axis-twelve" target="_blank"
+                                            class="ax-btn ax-btn--sm ax-btn--outline-primary">
+                                            <i class="fab fa-github"></i> GitHub Repository
+                                        </a>
+                                        <a href="https://dale-tomson.github.io/axis-twelve/" target="_blank"
+                                            class="ax-btn ax-btn--sm ax-btn--outline-secondary">
+                                            <i class="fas fa-book"></i> Documentation
+                                        </a>
+                                    </div>
+                                    <p class="mt-075-font-sm-text-muted">
+                                        <strong>License:</strong> MIT License
+                                    </p>
+                                </div>
+
+                                <!-- Chart.js -->
+                                <div class="mb-2-pb-2-border-bottom">
+                                    <h3 class="mb-05">
+                                        <i class="fas fa-chart-bar"
+                                            style="color: var(--color-accent); margin-right: 0.5rem;"></i>
+                                        Chart.js
+                                    </h3>
+                                    <p class="mb-075-text-secondary">
+                                        Simple yet flexible JavaScript charting library for designers and developers.
+                                    </p>
+                                    <div class="ax-flex ax-gap-md ax-flex-wrap">
+                                        <a href="https://www.chartjs.org/" target="_blank"
+                                            class="ax-btn ax-btn--sm ax-btn--outline-primary">
+                                            <i class="fas fa-globe"></i> Official Website
+                                        </a>
+                                        <a href="https://github.com/chartjs/Chart.js" target="_blank"
+                                            class="ax-btn ax-btn--sm ax-btn--outline-secondary">
+                                            <i class="fab fa-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                    <p class="mt-075-font-sm-text-muted">
+                                        <strong>License:</strong> MIT License
+                                    </p>
+                                </div>
+
+                                <!-- Font Awesome -->
+                                <div class="mb-2-pb-2-border-bottom">
+                                    <h3 class="mb-05">
+                                        <i class="fas fa-icons"
+                                            style="color: var(--color-success); margin-right: 0.5rem;"></i>
+                                        Font Awesome Free
+                                    </h3>
+                                    <p class="mb-075-text-secondary">
+                                        The internet's icon library and toolkit, used by millions of designers and
+                                        developers.
+                                    </p>
+                                    <div class="ax-flex ax-gap-md ax-flex-wrap">
+                                        <a href="https://fontawesome.com/" target="_blank"
+                                            class="ax-btn ax-btn--sm ax-btn--outline-primary">
+                                            <i class="fas fa-globe"></i> Official Website
+                                        </a>
+                                        <a href="https://github.com/FortAwesome/Font-Awesome" target="_blank"
+                                            class="ax-btn ax-btn--sm ax-btn--outline-secondary">
+                                            <i class="fab fa-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                    <p class="mt-075-font-sm-text-muted">
+                                        <strong>License:</strong> Icons - CC BY 4.0, Fonts - SIL OFL 1.1, Code - MIT
+                                        License
+                                    </p>
+                                </div>
+
+                                <!-- Google Fonts -->
+                                <div class="mb-0">
+                                    <h3 class="mb-05">
+                                        <i class="fas fa-font"
+                                            style="color: var(--color-warning); margin-right: 0.5rem;"></i>
+                                        Google Fonts (Inter)
+                                    </h3>
+                                    <p class="mb-075-text-secondary">
+                                        Free and open-source font families optimized for the web.
+                                    </p>
+                                    <div class="ax-flex ax-gap-md ax-flex-wrap">
+                                        <a href="https://fonts.google.com/specimen/Inter" target="_blank"
+                                            class="ax-btn ax-btn--sm ax-btn--outline-primary">
+                                            <i class="fas fa-globe"></i> Inter Font
+                                        </a>
+                                    </div>
+                                    <p class="mt-075-font-sm-text-muted">
+                                        <strong>License:</strong> SIL Open Font License 1.1
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- License Information -->
+                <div class="ax-grid ax-gap-lg">
+                    <div class="ax-col-12">
+                        <div class="ax-card">
+                            <div class="ax-card__header">
+                                <h2 class="ax-card__title">Project License</h2>
+                            </div>
+                            <div class="ax-card__body">
+                                <p class="mb-1-lh-16">
+                                    This admin panel template is provided as-is for educational and commercial use. You
+                                    are free to use, modify,
+                                    and distribute this template in your projects.
+                                </p>
+                                <p class="mb-1-lh-16">
+                                    <strong>Please note:</strong> While this template itself is free to use, all
+                                    third-party libraries and frameworks
+                                    listed above are subject to their respective licenses. Please review and comply with
+                                    their license terms when
+                                    using this template.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- Footer -->
+            <footer class="admin-footer">
+                <div>
+                    &copy; 2024 Axis Twelve Admin Panel. All rights reserved.
+                </div>
+                <div class="admin-footer__links">
+                    <a href="attribution.html">Attribution</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Custom Scripts -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
