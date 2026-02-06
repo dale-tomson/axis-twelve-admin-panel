@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Axis Twelve Admin Panel - Modern dashboard for managing your application">
   <title>Dashboard - Axis Twelve Admin Panel</title>
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- Axis Twelve CSS Framework (Modular) -->
   <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-layout.min.css">
   <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-buttons.min.css">
   <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-forms.min.css">
   <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-cards.min.css">
   <link rel="stylesheet" href="https://unpkg.com/axis-twelve/dist/modules/axis-tables.min.css">
-  
+
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/themes.css">
   <link rel="stylesheet" href="assets/css/admin-panel.css">
 </head>
+
 <body>
-  
+
   <div class="admin-wrapper">
-    
+
     <!-- Sidebar Navigation -->
     <aside class="admin-sidebar">
       <a href="index.html" class="admin-sidebar__brand">
         <img src="assets/images/logo.png" alt="Logo" class="admin-sidebar__logo">
         <span class="admin-sidebar__brand-text">Axis Twelve</span>
       </a>
-      
+
       <nav>
         <ul class="admin-sidebar__menu">
           <li class="admin-sidebar__item">
@@ -75,6 +77,16 @@
             </a>
           </li>
           <li class="admin-sidebar__item">
+            <a href="#" class="admin-sidebar__link">
+              <i class="fas fa-user-lock admin-sidebar__icon"></i>
+              <span class="admin-sidebar__text">Authentication</span>
+            </a>
+            <ul class="admin-sidebar__submenu">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+          </li>
+          <li class="admin-sidebar__item">
             <a href="attribution.html" class="admin-sidebar__link">
               <i class="fas fa-info-circle admin-sidebar__icon"></i>
               <span class="admin-sidebar__text">Attribution</span>
@@ -83,38 +95,38 @@
         </ul>
       </nav>
     </aside>
-    
+
     <!-- Main Content Area -->
     <div class="admin-main">
-      
+
       <!-- Header -->
       <header class="admin-header">
         <div class="admin-header__left">
           <button class="admin-header__toggle" aria-label="Toggle sidebar">
             <i class="fas fa-bars"></i>
           </button>
-          
+
           <div class="admin-header__search">
             <i class="fas fa-search admin-header__search-icon"></i>
             <input type="search" class="admin-header__search-input" placeholder="Search...">
           </div>
         </div>
-        
+
         <div class="admin-header__right">
           <button class="admin-header__notification" aria-label="Notifications">
             <i class="fas fa-bell"></i>
             <span class="admin-header__badge">5</span>
           </button>
-          
+
           <button class="admin-header__user" aria-label="User menu">
             <i class="fas fa-user-circle"></i>
           </button>
         </div>
       </header>
-      
+
       <!-- Content -->
       <main class="admin-content">
-        
+
         <!-- Page Header -->
         <div class="admin-content__header">
           <h1 class="admin-content__title">Dashboard</h1>
@@ -127,7 +139,7 @@
             <span class="admin-content__breadcrumb-item">Dashboard</span>
           </div>
         </div>
-        
+
         <!-- Statistics Cards -->
         <div class="ax-grid ax-gap-lg" class="page-header">
           <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
@@ -141,7 +153,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
             <div class="stat-card stat-card--secondary">
               <i class="fas fa-shopping-cart stat-card__icon"></i>
@@ -153,7 +165,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
             <div class="stat-card stat-card--success">
               <i class="fas fa-dollar-sign stat-card__icon"></i>
@@ -165,7 +177,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
             <div class="stat-card stat-card--warning">
               <i class="fas fa-chart-line stat-card__icon"></i>
@@ -178,7 +190,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Charts Section -->
         <div class="ax-grid ax-gap-lg" class="page-header">
           <div class="ax-col-12 ax-col-lg-8">
@@ -194,7 +206,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="ax-col-12 ax-col-lg-4">
             <div class="chart-container">
               <div class="chart-container__header">
@@ -206,7 +218,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Recent Activity Table -->
         <div class="ax-grid ax-gap-lg">
           <div class="ax-col-12">
@@ -278,9 +290,9 @@
             </div>
           </div>
         </div>
-        
+
       </main>
-      
+
       <!-- Footer -->
       <footer class="admin-footer">
         <div>
@@ -292,16 +304,17 @@
           <a href="#">Terms of Service</a>
         </div>
       </footer>
-      
+
     </div>
   </div>
-  
+
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  
+
   <!-- Custom Scripts -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/dashboard.js"></script>
-  
+
 </body>
+
 </html>

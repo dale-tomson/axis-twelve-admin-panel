@@ -121,6 +121,42 @@
   display: none;
 }
 
+.admin-sidebar__submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.admin-sidebar__item:hover .admin-sidebar__submenu {
+  max-height: 200px;
+}
+
+.admin-sidebar__submenu li {
+  padding: 0;
+}
+
+.admin-sidebar__submenu a {
+  display: block;
+  padding: 0.6rem 1rem 0.6rem 3.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.admin-sidebar__submenu a:hover {
+  background-color: var(--color-gray-100);
+  color: var(--color-secondary);
+  padding-left: 3.75rem;
+}
+
+.admin-sidebar.collapsed .admin-sidebar__submenu {
+  display: none;
+}
+
 /* ========================================
    HEADER / TOP NAVIGATION
    ======================================== */

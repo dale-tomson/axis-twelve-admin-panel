@@ -74,6 +74,16 @@
                         </a>
                     </li>
                     <li class="admin-sidebar__item">
+                        <a href="#" class="admin-sidebar__link">
+                            <i class="fas fa-user-lock admin-sidebar__icon"></i>
+                            <span class="admin-sidebar__text">Authentication</span>
+                        </a>
+                        <ul class="admin-sidebar__submenu">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Register</a></li>
+                        </ul>
+                    </li>
+                    <li class="admin-sidebar__item">
                         <a href="attribution.html" class="admin-sidebar__link">
                             <i class="fas fa-info-circle admin-sidebar__icon"></i>
                             <span class="admin-sidebar__text">Attribution</span>
@@ -164,12 +174,10 @@
                                 <p class="mb-1">This is an <em>italic text</em> example.</p>
                                 <p class="mb-1">This is an <u>underlined text</u> example.</p>
                                 <p class="mb-1">This is a <del>strikethrough text</del> example.</p>
-                                <p class="mb-1">This is a <mark
-                                        class="mark-highlight">highlighted
+                                <p class="mb-1">This is a <mark class="mark-highlight">highlighted
                                         text</mark> example.</p>
                                 <p class="mb-1">This is a <small>small text</small> example.</p>
-                                <p class="mb-0">This is a <code
-                                        class="code-inline">code snippet</code>
+                                <p class="mb-0">This is a <code class="code-inline">code snippet</code>
                                     example.</p>
                             </div>
                         </div>
@@ -255,8 +263,7 @@
                                 <h2 class="ax-card__title">Blockquote</h2>
                             </div>
                             <div class="ax-card__body">
-                                <blockquote
-                                    class="blockquote">
+                                <blockquote class="blockquote">
                                     <p class="mb-05">"The only way to do great work is to love what you
                                         do. If you haven't found it yet, keep looking. Don't settle."</p>
                                     <footer class="blockquote-footer">— Steve Jobs</footer>
@@ -271,8 +278,7 @@
                                 <h2 class="ax-card__title">Code Block</h2>
                             </div>
                             <div class="ax-card__body">
-                                <pre
-                                    class="code-block"><code>function greet(name) {
+                                <pre class="code-block"><code>function greet(name) {
   console.log(`Hello, ${name}!`);
   return true;
 }
