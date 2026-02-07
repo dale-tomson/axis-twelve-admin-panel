@@ -8,6 +8,12 @@
 
 A modern, responsive admin dashboard built with the **Axis Twelve CSS Framework v2.0**. This project provides a complete admin panel template with multiple pages, charts, forms, tables, and a clean, professional design.
 
+## 🚀 Live Preview
+
+**[View Live Demo →](https://dale-tomson.github.io/axis-twelve-admin-panel)**
+
+![Dashboard Preview](assets/images/appshot-dashboard.png)
+
 ## 📑 Quick Links
 
 - [Features](#-features)
