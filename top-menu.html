@@ -23,150 +23,7 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/themes.css">
 
-    <style>
-        /* Top Menu Layout Specific Styles */
-        body {
-            font-family: var(--font-sans);
-            background-color: var(--bg-body);
-            color: var(--text-primary);
-            margin: 0;
-            padding: 0;
-        }
-
-        .top-menu-wrapper {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .top-navbar {
-            background-color: var(--color-primary);
-            color: var(--color-white);
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .top-navbar__container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 60px;
-        }
-
-        .top-navbar__brand {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: var(--color-white);
-            text-decoration: none;
-            font-size: 1.25rem;
-            font-weight: 700;
-        }
-
-        .top-navbar__logo {
-            width: 32px;
-            height: 32px;
-        }
-
-        .top-navbar__menu {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 0.5rem;
-        }
-
-        .top-navbar__link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1rem;
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            border-radius: var(--radius);
-            transition: var(--transition-fast);
-            font-size: 0.95rem;
-        }
-
-        .top-navbar__link:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--color-white);
-        }
-
-        .top-navbar__link--active {
-            background-color: var(--color-secondary);
-            color: var(--color-primary);
-            font-weight: 600;
-        }
-
-        .top-navbar__right {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .top-navbar__icon-btn {
-            background: none;
-            border: none;
-            color: var(--color-white);
-            font-size: 1.25rem;
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: var(--radius);
-            transition: var(--transition-fast);
-            position: relative;
-        }
-
-        .top-navbar__icon-btn:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .top-navbar__badge {
-            position: absolute;
-            top: 0.25rem;
-            right: 0.25rem;
-            background-color: var(--color-danger);
-            color: var(--color-white);
-            font-size: 0.65rem;
-            font-weight: 700;
-            padding: 0.15rem 0.4rem;
-            border-radius: 10px;
-            min-width: 18px;
-            text-align: center;
-        }
-
-        .top-content {
-            flex: 1;
-            max-width: 1400px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-
-        .top-footer {
-            background-color: var(--bg-footer);
-            border-top: 1px solid var(--border-color);
-            padding: 1rem 1.5rem;
-            text-align: center;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-        }
-
-        @media (max-width: 768px) {
-            .top-navbar__menu {
-                display: none;
-            }
-
-            .top-content {
-                padding: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/admin-panel.css">
 </head>
 
 <body>
@@ -268,7 +125,7 @@
             </div>
 
             <!-- Statistics Cards -->
-            <div class="ax-grid ax-gap-lg" class="page-header">
+            <div class="ax-grid ax-gap-lg">
                 <div class="ax-col-12 ax-col-md-6 ax-col-lg-3">
                     <div class="stat-card">
                         <i class="fas fa-users stat-card__icon"></i>
@@ -371,69 +228,7 @@
     <!-- Custom Scripts -->
     <script src="assets/js/dashboard.js"></script>
 
-    <style>
-        /* Include stat-card styles from admin-panel.css */
-        .stat-card {
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
-            border-radius: var(--radius-lg);
-            padding: 1.5rem;
-            color: var(--color-white);
-            box-shadow: var(--shadow);
-            transition: var(--transition-base);
-            position: relative;
-            overflow: hidden;
-        }
 
-        .stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .stat-card--secondary {
-            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
-            color: var(--color-primary);
-        }
-
-        .stat-card--success {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-        }
-
-        .stat-card--warning {
-            background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
-        }
-
-        .stat-card__icon {
-            position: absolute;
-            right: 1.5rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 4rem;
-            opacity: 0.2;
-        }
-
-        .stat-card__label {
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.5rem;
-            opacity: 0.9;
-        }
-
-        .stat-card__value {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-card__change {
-            font-size: 0.875rem;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            opacity: 0.9;
-        }
-    </style>
 
 </body>
 

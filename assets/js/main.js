@@ -54,6 +54,10 @@
         // Check for saved sidebar state
         loadSidebarState();
 
+        // Initialize dropdowns and smooth scroll
+        initDropdowns();
+        initSmoothScroll();
+
         // Handle resize
         handleResize();
     }
@@ -149,13 +153,35 @@
         elements.mobileOverlay.addEventListener('click', closeMobileSidebar);
 
         // Close mobile sidebar when clicking nav links
-        const navLinks = elements.sidebar.querySelectorAll('.admin-sidebar__link');
+        const navLinks = elements.sidebar.querySelectorAll('.admin-sidebar__link:not([data-submenu-toggle])');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 if (state.isMobile) {
                     closeMobileSidebar();
                 }
             });
+        });
+
+        // Submenu toggle for sidebar
+        const submenuToggles = elements.sidebar.querySelectorAll('.admin-sidebar__item > .admin-sidebar__link');
+        submenuToggles.forEach(toggle => {
+            const submenu = toggle.nextElementSibling;
+            if (submenu && submenu.classList.contains('admin-sidebar__submenu')) {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const parent = toggle.parentElement;
+
+                    // Close other submenus (optional, but cleaner)
+                    const otherItems = elements.sidebar.querySelectorAll('.admin-sidebar__item');
+                    otherItems.forEach(item => {
+                        if (item !== parent) {
+                            item.classList.remove('submenu-open');
+                        }
+                    });
+
+                    parent.classList.toggle('submenu-open');
+                });
+            }
         });
 
         // Window resize

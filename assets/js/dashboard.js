@@ -10,17 +10,22 @@
     // CHART CONFIGURATION
     // ========================================
 
-    const chartColors = {
-        primary: '#081f37',
-        secondary: '#5fc9f3',
-        accent: '#2e79ba',
-        dark: '#1e549f',
-        success: '#28a745',
-        warning: '#ffc107',
-        danger: '#dc3545',
-        info: '#17a2b8',
-        gray: '#6c757d'
+    const getChartColors = () => {
+        const style = getComputedStyle(document.documentElement);
+        return {
+            primary: style.getPropertyValue('--color-primary').trim() || '#081f37',
+            secondary: style.getPropertyValue('--color-secondary').trim() || '#5fc9f3',
+            accent: style.getPropertyValue('--color-accent').trim() || '#2e79ba',
+            dark: style.getPropertyValue('--color-dark').trim() || '#1e549f',
+            success: style.getPropertyValue('--color-success').trim() || '#28a745',
+            warning: style.getPropertyValue('--color-warning').trim() || '#ffc107',
+            danger: style.getPropertyValue('--color-danger').trim() || '#dc3545',
+            info: style.getPropertyValue('--color-info').trim() || '#17a2b8',
+            gray: style.getPropertyValue('--color-gray-600').trim() || '#6c757d'
+        };
     };
+
+    let chartColors = getChartColors();
 
     const chartDefaults = {
         responsive: true,
